@@ -1,5 +1,4 @@
-//Function to fetch and display RSS feed
-  function displayRSSFeed() {
+function displayRSSFeed() {
     fetch('https://schachverein-schwalbach.de/httpdocs/index.php/feed/')
       .then(response => response.text())
       .then(data => {
@@ -8,14 +7,14 @@
         const items = xml.querySelectorAll('item');
         const feedContainer = document.getElementById('rss-feed');
 
-        let html = '<h2>Aktuelles aus dem Blog</h2>';
+        let html = '<h2>Neuigkeiten aus dem RSS Feed</h2>';
         html += '<ul>';
         items.forEach(item => {
           const title = item.querySelector('title').textContent;
           const link = item.querySelector('link').textContent;
           const description = item.querySelector('description').textContent;
 
-          html += `<li><a href="${link}">${title}</a><p>${description}</p></li>`;
+          html += `<li><a href="${link}"><h3>${title}</h3></a><p>${description}</p></li>`;
         });
         html += '</ul>';
 
@@ -28,4 +27,3 @@
 
   // Call the function to display the RSS feed
   displayRSSFeed();
-

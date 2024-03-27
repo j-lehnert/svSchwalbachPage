@@ -128,6 +128,11 @@ input, select, textarea {
 		margin-bottom: 0.8em;
 	}
 
+	#rss-feed h3 {
+		font-size: 24px;
+		color: black;
+	  }
+
 	h4 {
 		font-size: 1em;
 	}
