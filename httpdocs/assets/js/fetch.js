@@ -8,7 +8,7 @@
         const items = xml.querySelectorAll('item');
         const feedContainer = document.getElementById('rss-feed');
 
-        let html = '<h2>Neuigkeiten aus dem RSS Feed</h2>';
+        let html = '<h2>Aktuellster Blogpost</h2>';
         html += '<ul>';
         items.forEach(item => {
           const title = item.querySelector('title').textContent;
