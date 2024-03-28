@@ -13,7 +13,7 @@ function displayRSSFeed() {
         const title = item.querySelector('title').textContent;
         const link = item.querySelector('link').textContent;
         const description = item.querySelector('description').textContent;
-        const pubDate = new Date(item.querySelector('pubDate').textContent).toLocaleDateString('de-DE', { year: 'numeric', month: 'long', day: 'numeric' });
+        const pubDate = new Date(item.getElementsByTagName('pubDate')[0].textContent).toLocaleDateString('de-DE', { year: 'numeric', month: 'long', day: 'numeric' });
 
         html += `<li><a href="${link}"><h3>${title}</h3></a><p>${description}</p><p>Veröffentlicht am: ${pubDate}</p></li>`;
       });
