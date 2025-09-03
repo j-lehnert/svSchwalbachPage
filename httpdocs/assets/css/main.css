@@ -1913,10 +1913,6 @@ input, select, textarea {
 						border-top: 0;
 					}
 
-					#navPanel .link:last-child {
-						border-bottom: 0;
-					}
-
 			body.navPanel-visible #page-wrapper {
 				-moz-transform: translateX(275px);
 				-webkit-transform: translateX(275px);
